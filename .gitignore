@@ -1,0 +1,23 @@
+# Normal rules
+.*
+!.gitignore
+!.gitattributes
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven
+**/target
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Other cruft
+*~
+/src/main/java/META-INF
+*.orig

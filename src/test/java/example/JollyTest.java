@@ -19,15 +19,9 @@ public class JollyTest {
 
 	HolidayManager hm;
 
-	public JollyTest() {
+	public JollyTest() throws MalformedURLException {
 		Properties props = new Properties();
-		URL url;
-		try {
-			url = (new java.io.File("src/main/resources/holidays.xml")).toURI().toURL();
-		} catch (MalformedURLException e) {
-			e.printStackTrace();
-			throw new RuntimeException();
-		}
+		URL url = (new java.io.File("src/main/resources/holidays.xml")).toURI().toURL();
 		ManagerParameter mp = new UrlManagerParameter(url, props);
 		hm = HolidayManager.getInstance(mp);
 	}
